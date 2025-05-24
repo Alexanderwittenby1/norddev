@@ -16,7 +16,7 @@ import Link from "next/link";
 
 const Navbar = () => {
   return (
-    <div className="w-full h-16 bg-gray-800 text-black flex items-center justify-between px-4">
+    <div className="fixed top-0 left-0 w-full z-50 bg-black/0 text-black flex items-center justify-between px-4 h-16">
       {/* Vänster: Logga */}
       <Link href="/">
         <div className="flex items-center">
@@ -34,12 +34,12 @@ const Navbar = () => {
         <NavigationMenuList>
           <NavigationMenuItem className="flex items-center ">
             <Link href="/kontakt">
-              <NavigationMenuLink className={navigationMenuTriggerStyle() + " text-white"}>
+              <NavigationMenuLink className={navigationMenuTriggerStyle() + " text-red-500"}>
                 Kontakta oss
               </NavigationMenuLink>
             </Link>
             <Link href="/om-oss">
-              <NavigationMenuLink className={navigationMenuTriggerStyle() + " text-white"}>
+              <NavigationMenuLink className={navigationMenuTriggerStyle() + " text-red-500"}>
                 Om oss
               </NavigationMenuLink>
             </Link>
