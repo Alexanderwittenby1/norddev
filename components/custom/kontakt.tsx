@@ -15,6 +15,8 @@ import {
 } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
 
+
+
 const kontaktSchema = z.object({
   name: z.string().min(1, 'Du måste ange ett namn').max(50, 'Namnet får inte vara längre än 50 tecken'),
   email: z.string().email('Epostadressen är ogiltig').min(1, 'E-postadress är obligatorisk'),
@@ -31,8 +33,22 @@ export function KontaktForm() {
     },
   });
 
-  function onSubmit(data: z.infer<typeof kontaktSchema>) {
-    console.log('Form submitted:', data);
+  async function onSubmit(data: z.infer<typeof kontaktSchema>) {
+    const res = await fetch('/api/send', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data),
+    });
+    if (res.ok) {
+      console.log('Formuläret skickat:', data);
+      form.reset();
+      alert('Ditt meddelande har skickats!');
+    }
+    else {
+      alert('Något gick fel, försök igen senare.');
+    }
   }
 
   return (
