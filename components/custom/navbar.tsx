@@ -25,7 +25,7 @@ const Navbar = () => {
             alt="NordDev Logo"
             width={50}
             height={50}
-            className="rounded-full mr-2 "
+            className="rounded-full mr-2  duration-200 ease-in-out hover:scale-105"
           />
         </div>
       </Link>
@@ -34,12 +34,12 @@ const Navbar = () => {
         <NavigationMenuList>
           <NavigationMenuItem className="flex items-center ">
             <Link href="/kontakt">
-              <NavigationMenuLink className={navigationMenuTriggerStyle() + " text-red-500"}>
+              <NavigationMenuLink className={navigationMenuTriggerStyle() + " text-black border-2 bg-white border-black hover:scale-105 transition-all duration-200 ease-in-out"}>
                 Kontakta oss
               </NavigationMenuLink>
             </Link>
             <Link href="/om-oss">
-              <NavigationMenuLink className={navigationMenuTriggerStyle() + " text-red-500"}>
+              <NavigationMenuLink className={navigationMenuTriggerStyle() + "text-black border-2 bg-white border-black hover:scale-105 transition-all duration-200 ease-in-out"}>
                 Om oss
               </NavigationMenuLink>
             </Link>
