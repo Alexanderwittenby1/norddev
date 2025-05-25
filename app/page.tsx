@@ -1,6 +1,7 @@
 import Sektion from "@/components/custom/sektion";
 import React from "react";
 import Hero from "@/components/custom/hero";
+import { metadata } from "./layout";
 
 
 
@@ -18,9 +19,12 @@ export default function Home() {
     <div >
       
       <Hero /> 
-      <Sektion />
+      <Sektion /> 
       
       
     </div>
   );
 }
+
+
+

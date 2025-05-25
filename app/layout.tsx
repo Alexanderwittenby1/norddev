@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/custom/navbar";
 import { Footer } from "@/components/custom/footer";
 import { SpeedInsights } from "@vercel/speed-insights/next"
+import Hero from "@/components/custom/hero";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -31,6 +32,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
 
       >
+      
       <SpeedInsights/>
       <Navbar />
         {/* Main content */}
