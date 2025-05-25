@@ -9,7 +9,7 @@ export const Footer = () => {
                 &copy; {new Date().getFullYear()} NordDev. All rights reserved.
             </p>
             <p className="text-sm">
-                Made with ❤️ by NordDev Team
+                skapad av NordDev
             </p>
             </div>
         </footer>
