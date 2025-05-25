@@ -13,12 +13,12 @@ export default function Sektion() {
   };
 
   return (
-    <section className="bg-gray-100 py-16 h-dvh">
-      <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+    <section className="bg-gray-100 py-16 h-dvh ">
+      <div className="container mx-auto px-4 ">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center ">
           {/* Vänster: Tjänster */}
           <div>
-            <h2 className="text-3xl font-bold text-left mb-8">Våra Tjänster</h2>
+            <h2 className="text-3xl font-bold text-left mb-8 border-b shadow-2xs">VÅRA TJÄNSTER</h2>
             <div className="space-y-8">
               <motion.div
                 initial={{ opacity: 0, y: 40 }}
@@ -30,6 +30,9 @@ export default function Sektion() {
                 <h3 className="text-xl font-semibold mb-4">Konsultering</h3>
                 <p className="text-gray-700">
                   {MetaData.konsultering}
+                </p>
+                <p>
+                  Klicka <a href="#" className="text-blue-500 hover:underline">här</a> för att läsa mer.
                 </p>
               </motion.div>
               <motion.div
@@ -43,6 +46,9 @@ export default function Sektion() {
                 <p className="text-gray-700">
                   {MetaData.Webbutveckling}
                 </p>
+                <p>
+                  Klicka <a href="#" className="text-blue-500 hover:underline">här</a> för att läsa mer.
+                </p>
               </motion.div>
               <motion.div
                 initial={{ opacity: 0, y: 40 }}
@@ -54,6 +60,9 @@ export default function Sektion() {
                 <h3 className="text-xl font-semibold mb-4">Apputveckling</h3>
                 <p className="text-gray-700">
                   {MetaData.Apputveckling}
+                </p>
+                <p>
+                  Klicka <a href="#" className="text-blue-500 hover:underline">här</a> för att läsa mer.
                 </p>
               </motion.div>
             </div>
