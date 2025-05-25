@@ -9,9 +9,9 @@ export async function POST(request: Request) {
 
   try {
     await resend.emails.send({
-      from: 'NordDev <allewi@live.se>', 
-      to: ['allewi@live.se'],           
-      subject: `Kontaktformulär från ${name}`,
+      from: 'onboarding@resend.dev', 
+      to: 'allewi@live.se',           
+      subject: `Nytt mail ${name}`,
       replyTo: email,
       react: emailTemplate({name, email, message}) as React.ReactElement,
     });
