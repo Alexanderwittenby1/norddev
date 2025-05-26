@@ -1,9 +1,19 @@
 import React from 'react'
 import Hero from '@/components/custom/hero'
-export default function page() {
+import ProfileCard from '@/components/custom/profileCard'
+
+export default function Page() {
   return (
-    <>
-        <Hero />
-    </>
+    <div className="relative">
+      <Hero 
+      image='/milad.jpg'
+      title='VÅRA' 
+      span='UTVECKLARE'/>
+      <div className="">
+        <ProfileCard />
+        <ProfileCard />
+        <ProfileCard />
+      </div>
+    </div>
   )
 }

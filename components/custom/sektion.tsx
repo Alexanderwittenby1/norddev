@@ -19,13 +19,13 @@ export default function Sektion() {
           {/* Vänster: Tjänster */}
           <div>
             <h2 className="text-3xl font-bold text-left mb-8 border-b shadow-2xs">VÅRA TJÄNSTER</h2>
-            <div className="space-y-8">
+            <div className="space-y-4 ">
               <motion.div
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: false }}
-                className="bg-white p-6 rounded-lg shadow-md"
+                className="bg-white p-6 rounded-lg shadow-md hover:scale-105 transition-all duration-200 ease-in-out hover:bg-gray-100"
               >
                 <h3 className="text-xl font-semibold mb-4">Konsultering</h3>
                 <p className="text-gray-700">
@@ -40,7 +40,7 @@ export default function Sektion() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 viewport={{ once: false }}
-                className="bg-white p-6 rounded-lg shadow-md"
+                className="bg-white p-6 rounded-lg shadow-md hover:scale-105 transition-all duration-200 ease-in-out hover:bg-gray-200"
               >
                 <h3 className="text-xl font-semibold mb-4">Webbutveckling</h3>
                 <p className="text-gray-700">
@@ -55,7 +55,7 @@ export default function Sektion() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.4 }}
                 viewport={{ once: false }}
-                className="bg-white p-6 rounded-lg shadow-md"
+                className="bg-white p-6 rounded-lg shadow-md hover:scale-105 transition-all duration-200 ease-in-out hover:bg-gray-300 "
               >
                 <h3 className="text-xl font-semibold mb-4">Apputveckling</h3>
                 <p className="text-gray-700">
@@ -68,7 +68,7 @@ export default function Sektion() {
             </div>
           </div>
           {/* Högersektion: bilder */}
-          <div className="hidden md:flex flex-col gap-8 items-center">
+          <div className="hidden md:flex flex-col gap-8 items-center ">
             <motion.div
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}

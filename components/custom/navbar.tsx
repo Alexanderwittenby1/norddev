@@ -23,7 +23,7 @@ const Navbar = () => {
             alt="NordDev Logo"
             width={50}
             height={50}
-            className="rounded-full duration-200 ease-in-out hover:scale-105"
+            className="rounded-full duration-200 ease-in-out hover:scale-105 "
           />
         </div>
       </Link>

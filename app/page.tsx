@@ -18,7 +18,10 @@ export default function Home() {
   return (
     <div >
       
-      <Hero /> 
+      <Hero 
+        image="/milad.jpg"
+        title='ER VISION'
+        span='VÅR UTMANING' />
       <Sektion /> 
       
       
