@@ -10,9 +10,18 @@ export default function Page() {
       title='VÅRA' 
       span='UTVECKLARE'/>
       <div className="">
-        <ProfileCard />
-        <ProfileCard />
-        <ProfileCard />
+        <ProfileCard 
+          name='Erik'
+          image='/milad.jpg'
+          description='Erik är en' />
+        <ProfileCard 
+          name='Isak'
+          image='/milad.jpg'
+          description='Isak är en'/>
+        <ProfileCard 
+          name='Alexander'
+          image='/milad.jpg'
+          description='Alexander är en'/>
       </div>
     </div>
   )
