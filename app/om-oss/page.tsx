@@ -1,3 +1,4 @@
+"use client"
 import React from 'react'
 import Hero from '@/components/custom/hero'
 import ProfileCard from '@/components/custom/profileCard'
@@ -8,16 +9,25 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel"
-
+import Autoplay from "embla-carousel-autoplay"
+import { delay } from 'framer-motion'
 
 export default function Page() {
+  const plugin = React.useRef(
+    Autoplay({ delay: 5000, stopOnInteraction: true })
+  )
+
+  
   return (
     <div className="relative">
       <Hero 
       image='/milad.jpg'
       title='VÅRA' 
       span='UTVECKLARE'/>
-      <Carousel className="w-full h-96">
+      <Carousel
+        plugins={[plugin.current]}
+        opts={{ align: "start", loop: true}}
+        className="w-full h-96">
         <CarouselContent className="flex ">
           <CarouselItem className="lg:basis-1/3 md:basis-1/2 basis-full">
           <ProfileCard 

@@ -6,10 +6,19 @@ interface ProfileCardProps {
   description: string;
 }
 const profileCard = ({name, image, description}: ProfileCardProps) => {
+
+  const backgroundColors = [
+    'bg-blue-100',
+    'bg-green-100',
+    'bg-red-100',
+    'bg-yellow-100',
+    'bg-purple-100',
+  ];
+  const randomColor = backgroundColors[Math.floor(Math.random() * backgroundColors.length)];
   return (
     <div>
         <div className="bg-white shadow-lg rounded-lg p-8 max-w-sm mx-auto select-none">
-            <div className='relative h-[200px] flex items-center justify-left bg-gray-300 border-b-2 border-gray-200 rounded-r-2xl'>
+            <div className={`relative h-[200px] flex items-center justify-left ${randomColor}  border-b-2 border-gray-200 rounded-r-2xl`}>
                 <img
                     src={image}
                     alt="Profile Picture"
