@@ -4,8 +4,9 @@ interface ProfileCardProps {
   name: string;
   image: string;
   description: string;
+  info?: string[];
 }
-const profileCard = ({name, image, description}: ProfileCardProps) => {
+const profileCard = ({name, image, description,info}: ProfileCardProps) => {
 
   const backgroundColors = [
     'bg-blue-100',
@@ -30,6 +31,16 @@ const profileCard = ({name, image, description}: ProfileCardProps) => {
                 <p>
                     <span className="text-gray-600 text-sm">{description}</span>
                 </p>
+                {info && info.length > 0 && (
+                    <div className={`absolute bg-violet-300 mt-2 justify-start bottom-0 left-0  p-2 rounded-b-2xl w-full`}> 
+                        
+                        <ul className="list-none text-gray-700 flex flex-col md:flex-row flex-wrap items-start gap-2">
+                            {info.map((skill, index) => (
+                                <li className='bg-black text-white rounded p-0.5 justify-evenly' key={index}>{skill}</li>
+                            ))}
+                        </ul>
+                    </div>
+                )}
             </div>
         </div>
     </div>

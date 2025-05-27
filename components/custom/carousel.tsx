@@ -23,24 +23,28 @@ const Karusell = () => {
             <ProfileCard 
             name='Erik Leopold Jacobsen'
             image='/milad.jpg'
-            description='Erik ' /></CarouselItem>
+            description='Erik '
+            info={['C++','React.js','Next.js','TypeScript','SQL']} /></CarouselItem>
             <CarouselItem className="lg:basis-1/3 md:basis-1/2 basis-full">
                 <ProfileCard 
                 name='Isak Klaesson'
                 image='/milad.jpg'
-                description='Isak ' />
+                description='Isak '
+                info={['C++','React.js','Next.js','TypeScript','SQL']} />
             </CarouselItem>
             <CarouselItem className="lg:basis-1/3 md:basis-1/2 basis-full">
                 <ProfileCard 
                 name='Alexander Wittenby'
                 image='/milad.jpg'
-                description='Alexander '/>
+                description='Alexander'
+                info={['Python','React.js','Next.js','TypeScript','SQL']}/>
             </CarouselItem>
             <CarouselItem className="lg:basis-1/3 md:basis-1/2 basis-full">
                 <ProfileCard 
                 name='Johan Olofsson'
                 image='/milad.jpg'
-                description='Johan'/>
+                description='Johan'
+                info={['C++','React.js','Next.js','TypeScript','SQL']}/>
             </CarouselItem>
             </CarouselContent>
             <CarouselPrevious />
