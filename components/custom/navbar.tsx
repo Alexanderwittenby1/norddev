@@ -14,7 +14,7 @@ const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <div className="z-10 absolute w-full bg-transparent text-black flex items-center justify-between px-4 h-16 border-b border-gray-200/20 shadow-md transition-all duration-300 ease-in-out">
+    <div className="z-10  w-full bg-white text-black flex items-center justify-between px-4 h-16 border-b border-gray-200/20 shadow-md transition-all duration-300 ease-in-out">
       {/* Vänster: Logga */}
       <Link href="/">
         <div className="flex items-center">
@@ -44,7 +44,7 @@ const Navbar = () => {
             menuOpen ? "flex flex-col items-stretch gap-2" : "flex md:flex-row flex-col sm:flex-row items-center"
           }`}
         >
-          <NavigationMenuItem className="flex items-center flex-col sm:flex-row items-start">
+          <NavigationMenuItem className="flex items-center flex-col sm:flex-row ">
             <Link href="/kontakt">
               <NavigationMenuLink className={navigationMenuTriggerStyle() + " text-white font-bold border-2 bg-red-500 border-black hover:scale-105 transition-all duration-200 ease-in-out"}>
                 Kontakta oss

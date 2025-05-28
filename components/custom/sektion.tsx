@@ -13,7 +13,7 @@ export default function Sektion() {
   };
 
   return (
-    <section className="bg-gray-100 py-16">
+    <section className="bg-[url(/björkis.jpg)] py-16 h-screen bg-cover bg-center bg-no-repeat">
       <div className="container mx-auto px-4 w-screen h-screen py-16 ">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center ">
           {/* Vänster: Tjänster */}
