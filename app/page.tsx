@@ -1,25 +1,20 @@
+
 import Sektion from "@/components/custom/sektion";
 import React from "react";
 import Hero from "@/components/custom/hero";
 import { metadata } from "./layout";
+import { ParallaxProvider } from "react-scroll-parallax";
 
 
 
 export default function Home() {
 
-  const MetaData = {
-    title: "NordDev",
-    description: "Vi på NordDev",
-    Apputveckling: "Mer information om apputveckling kommer snart.",
-    Webbutveckling: "Mer information om webbutveckling kommer snart.",
-    konsultering: "Mer information om konsulttjänster kommer snart.",
-  };
+ 
 
   return (
     <div >
       
       <Hero 
-        image="/milad.jpg"
         title='ER VISION'
         span='VÅR UTMANING' />
       <Sektion /> 

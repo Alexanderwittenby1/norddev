@@ -1,30 +1,55 @@
-import React from 'react';
-
+"use client";
+import { motion, useScroll, useTransform } from 'framer-motion';
+import React, { useRef } from 'react';
 
 interface HeroProps {
-  image: string;
   title: string;
   span: string;
 }
 
-const Hero = ({ image, title, span }: HeroProps) => {
- 
+export default function Hero({ title, span }: HeroProps) {
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ['start start', 'end start'],
+  })
+  const backgroundY = useTransform(scrollYProgress, [0, 1], ['0%', '100%']);
+  const textY = useTransform(scrollYProgress, [0, 1], ['0%', '50%']);
+  const opacity = useTransform(scrollYProgress, [0, 1], [1, 0]);
+  
   return (
-    <>
-    <main>
+    <div
+      ref={ref}
       
-      <div className="relative w-full min-h-screen bg-cover bg-center " style={{ backgroundImage: `url(${image})` }}>
-        <div className="absolute inset-0 flex items-center justify-center bg-transparent bg-opacity-50">
-          <div className="text-center text-white">
-            <h1 className="text-5xl font-bold select-none">{title} <span className='text-5xl font-extrabold text-amber-900'>{span}</span></h1>
-            
-          </div>
-        </div>
-      </div>
+      className="relative w-full h-screen overflow-hidden ">
       
-    </main>
-    </>
+      <motion.div
+        className="absolute inset-0 z-0"
+        style={{
+          backgroundImage: 'url(/full-image.png)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'bottom',
+          y: backgroundY,
+        }}
+      />
+      
+      <div
+        className="absolute inset-0 z-10"
+        style={{
+          backgroundImage: 'url(/Subtract.png)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'bottom',
+        }}
+      />
+      
+      <motion.h1
+        style={{ y: textY, opacity: opacity }} 
+        className="absolute inset-0 z-10 flex items-center justify-center">
+        <h1 className="font-bold text-white text-4xl md:text-6xl text-center select-none drop-shadow-lg">
+          {title} <span className="text-blue-500">{span}</span>
+        </h1>
+      </motion.h1>
+    </div>
   );
-};
+}
 
-export default Hero;

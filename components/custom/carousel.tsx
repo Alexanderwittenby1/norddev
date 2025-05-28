@@ -14,10 +14,12 @@ const Karusell = () => {
         Autoplay({ delay: 5000, stopOnInteraction: true })
       )
     return (
+        <div className="h-full justify-center items-center flex ">
+        <h1>hello</h1>
         <Carousel
             plugins={[plugin.current]}
             opts={{ align: "start", loop: true}}
-            className="w-full h-96">
+            className="w-[90%] h-96">
             <CarouselContent className="flex ">
             <CarouselItem className="lg:basis-1/3 md:basis-1/2 basis-full">
             <ProfileCard 
@@ -37,7 +39,7 @@ const Karusell = () => {
                 name='Alexander Wittenby'
                 image='/milad.jpg'
                 description='Alexander'
-                info={['Python','React.js','Next.js','TypeScript','SQL']}/>
+                info={['Python','React.js','Next.js','TypeScript','SQL','Express']}/>
             </CarouselItem>
             <CarouselItem className="lg:basis-1/3 md:basis-1/2 basis-full">
                 <ProfileCard 
@@ -52,6 +54,7 @@ const Karusell = () => {
             
 
         </Carousel>
+        </div>
     )
 }
 

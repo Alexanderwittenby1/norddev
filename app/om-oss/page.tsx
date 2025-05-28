@@ -7,9 +7,9 @@ import Karusell from '@/components/custom/carousel'
 export default function Page() {
   
   return (
-    <div className="relative">
+    <div className="relative h-screen">
       <Hero 
-      image='/milad.jpg'
+      
       title='VÅRA' 
       span='UTVECKLARE'/>
       <Karusell/>
