@@ -21,7 +21,7 @@ export default function Hero({ title, span }: HeroProps) {
     <div
       ref={ref}
       
-      className="relative w-full h-dvh overflow-hidden ">
+      className="relative w-full h-screen overflow-hidden  ">
       
       <motion.div
         className="absolute inset-0 z-0"

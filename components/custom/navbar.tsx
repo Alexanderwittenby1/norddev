@@ -14,7 +14,7 @@ const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <div className="z-10  w-full bg-white text-black flex items-center justify-between px-4 h-16 border-b border-gray-200/20 shadow-md transition-all duration-300 ease-in-out">
+    <div className="absolute z-11 w-full bg-white text-black flex items-center justify-between px-4 h-16 border-b border-gray-200/20 shadow-md transition-all duration-300 ease-in-out">
       {/* Vänster: Logga */}
       <Link href="/">
         <div className="flex items-center">
