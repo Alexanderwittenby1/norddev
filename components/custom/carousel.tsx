@@ -15,7 +15,7 @@ const Karusell = () => {
       )
     return (
         <div className="h-full justify-center items-center flex ">
-        <h1>hello</h1>
+        
         <Carousel
             plugins={[plugin.current]}
             opts={{ align: "start", loop: true}}

@@ -30,21 +30,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      
+    <html lang="en" className="h-full">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased select-none`}
-
+        className={`${geistSans.variable} ${geistMono.variable} antialiased select-none min-h-screen flex flex-col h-full`}
       >
         <SpeedInsights/>
         <ScrollToTopOnRouteChange />
         <Navbar />
-        
-        {children}
-        {/* Footer */}
-      <Footer/>
+        <main className="flex-grow">
+          {children}
+        </main>
+        <Footer />
       </body>
-     
     </html>
   );
 }

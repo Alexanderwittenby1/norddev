@@ -21,7 +21,7 @@ export default function Hero({ title, span }: HeroProps) {
     <div
       ref={ref}
       
-      className="relative w-full h-screen overflow-hidden ">
+      className="relative w-full h-dvh overflow-hidden ">
       
       <motion.div
         className="absolute inset-0 z-0"
@@ -42,13 +42,13 @@ export default function Hero({ title, span }: HeroProps) {
         }}
       />
       
-      <motion.h1
-        style={{ y: textY, opacity: opacity }} 
+      <h1
+        
         className="absolute inset-0 z-10 flex items-center justify-center">
         <h1 className="font-bold text-white text-4xl md:text-6xl text-center select-none drop-shadow-lg">
-          {title} <span className="text-blue-500">{span}</span>
+          {title} <span className="text-[#b697ec]">{span}</span>
         </h1>
-      </motion.h1>
+      </h1>
     </div>
   );
 }

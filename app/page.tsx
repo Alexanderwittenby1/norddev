@@ -12,9 +12,7 @@ export default function Home() {
 
   return (
     <div >
-      <Hero 
-        title='ER VISION'
-        span='VÅR UTMANING' />
+      <Hero title='ER VISION' span='VÅR UTMANING' />
       <Sektion /> 
     </div>
   );

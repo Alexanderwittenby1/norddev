@@ -7,7 +7,7 @@ import Karusell from '@/components/custom/carousel'
 export default function Page() {
   
   return (
-    <div className="relative h-screen">
+    <div className="relative ">
       <Hero 
       
       title='VÅRA' 
