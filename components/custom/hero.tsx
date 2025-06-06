@@ -5,17 +5,17 @@ import React, { useRef } from 'react';
 interface HeroProps {
   title: string;
   span: string;
+  subheading?: string;
 }
 
-export default function Hero({ title, span }: HeroProps) {
+export default function Hero({ title, span,subheading }: HeroProps) {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ['start start', 'end start'],
   })
   const backgroundY = useTransform(scrollYProgress, [0, 1], ['0%', '100%']);
-  const textY = useTransform(scrollYProgress, [0, 1], ['0%', '50%']);
-  const opacity = useTransform(scrollYProgress, [0, 1], [1, 0]);
+  
   
   return (
     <div
@@ -42,13 +42,12 @@ export default function Hero({ title, span }: HeroProps) {
         }}
       />
       
-      <h1
-        
-        className="absolute inset-0 z-10 flex items-center justify-center">
+      <div className="absolute inset-0 z-10 flex flex-col items-center justify-center">
         <h1 className="font-bold text-white text-4xl md:text-6xl text-center select-none drop-shadow-lg">
           {title} <span className="text-[#b697ec]">{span}</span>
         </h1>
-      </h1>
+        <p className="text-white mt-4 text-lg font-bold">{subheading}</p>
+      </div>
     </div>
   );
 }

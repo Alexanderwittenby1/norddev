@@ -32,11 +32,11 @@ const profileCard = ({name, image, description,info}: ProfileCardProps) => {
                     <span className="text-gray-600 text-sm">{description}</span>
                 </p>
                 {info && info.length > 0 && (
-                    <div className={`absolute bg-violet-300 mt-2 justify-start bottom-0 left-0  p-2 rounded-b-2xl w-full`}> 
+                    <div className={`absolute bg-violet-300 mt-2 justify-start bottom-0 left-0  p-2 rounded-b-2xl w-full `}> 
                         
-                        <ul className="list-none text-gray-700 flex flex-col md:flex-row flex-wrap items-start gap-2">
+                        <ul className="list-none text-gray-700 flex flex-row md:flex-row sm:flex-row flex-wrap items-start gap-2">
                             {info.map((skill, index) => (
-                                <li className='bg-black text-white rounded p-0.5 justify-evenly' key={index}>{skill}</li>
+                                <li className='bg-black text-white rounded p-0.5 justify-evenly flex ' key={index}>{skill}</li>
                             ))}
                         </ul>
                     </div>

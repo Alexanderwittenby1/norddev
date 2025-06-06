@@ -3,18 +3,23 @@ import { motion } from 'framer-motion'
 import React from 'react'
 import Image from "next/image";
 
-export default function Sektion() {
-  const MetaData = {
-    title: "NordDev",
-    description: "Vi på NordDev",
-    Apputveckling: "Mer information om apputveckling kommer snart.",
-    Webbutveckling: "Mer information om webbutveckling kommer snart.",
-    konsultering: "Mer information om konsulttjänster kommer snart.",
-  };
+type MetaDataType = {
+  title: string;
+  description: string;
+  Apputveckling: string;
+  Webbutveckling: string;
+  konsultering: string;
+  backgroundImage: string;
+};
+
+
+export default function Sektion({data}: { data: MetaDataType }) {
+
 
   return (
-    <section className="bg-[url(/björkis.jpg)] py-16 bg-cover bg-center bg-no-repeat">
-      <div className="container mx-auto px-4 w-screen  py-16 ">
+    <section className={`bg-[url(${data.backgroundImage})] py-16 bg-cover bg-center bg-no-repeat`}>
+      {/* Bakgrundsbild */}
+      <div className="container mx-auto px-4 w-screen py-16 ">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center ">
           {/* Vänster: Tjänster */}
           <div>
@@ -29,7 +34,7 @@ export default function Sektion() {
               >
                 <h3 className="text-xl font-semibold mb-4">Konsultering</h3>
                 <p className="text-gray-700">
-                  {MetaData.konsultering}
+                  {data.konsultering}
                 </p>
                 <p>
                   Klicka <a href="#" className="text-blue-500 hover:underline">här</a> för att läsa mer.
@@ -44,7 +49,7 @@ export default function Sektion() {
               >
                 <h3 className="text-xl font-semibold mb-4">Webbutveckling</h3>
                 <p className="text-gray-700">
-                  {MetaData.Webbutveckling}
+                  {data.Webbutveckling}
                 </p>
                 <p>
                   Klicka <a href="#" className="text-blue-500 hover:underline">här</a> för att läsa mer.
@@ -59,7 +64,7 @@ export default function Sektion() {
               >
                 <h3 className="text-xl font-semibold mb-4">Apputveckling</h3>
                 <p className="text-gray-700">
-                  {MetaData.Apputveckling}
+                  {data.Apputveckling}
                 </p>
                 <p>
                   Klicka <a href="#" className="text-blue-500 hover:underline">här</a> för att läsa mer.
@@ -68,7 +73,7 @@ export default function Sektion() {
             </div>
           </div>
           {/* Högersektion: bilder */}
-          <div className="hidden md:flex flex-col gap-8 items-center ">
+          {/* <div className="hidden md:flex flex-col gap-8 items-center ">
             <motion.div
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -92,7 +97,7 @@ export default function Sektion() {
             />
             </motion.div>
             
-          </div>
+          </div> */}
         </div>
       </div>
     </section>
