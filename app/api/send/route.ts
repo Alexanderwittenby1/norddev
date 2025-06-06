@@ -21,7 +21,7 @@ export async function POST(request: Request) {
     const html = emailTemplate({ name, email, message });
 
     await transporter.sendMail({
-      from: "info@nordiskdev.se",
+      from: `Nytt kundmejl <info@nordiskdev.se>` ,
       to: 'info@nordiskdev.se',
       subject: `Nytt mail från ${name}`,
       replyTo: email,
