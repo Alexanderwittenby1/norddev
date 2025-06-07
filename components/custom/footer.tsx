@@ -8,9 +8,9 @@ export const Footer = () => {
             <p className="text-sm">
                 &copy; {new Date().getFullYear()} NordDev. All rights reserved.
             </p>
-            <p className="text-sm">
-                skapad av NordDev
-            </p>
+            <a href="/privacy-policy" className="text-sm hover:underline">
+                Integritetspolicy
+            </a>
             </div>
         </footer>
     </div>

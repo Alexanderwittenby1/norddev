@@ -2,10 +2,10 @@ import nodemailer from 'nodemailer';
 import emailTemplate from '@/components/custom/email-template';
 
 export async function POST(request: Request) {
-  console.log("POST /api/send called"); // <-- Lägg till denna rad
+  console.log("POST /api/send called"); 
 
-  const { name, email, message } = await request.json();
-  console.log("Received data:", { name, email, message }); // <-- och denna
+  const { firstname,lastname, email, message } = await request.json();
+  
 
   const transporter = nodemailer.createTransport({
     host: process.env.SMTP_HOST,
@@ -18,12 +18,12 @@ export async function POST(request: Request) {
   });
 
   try {
-    const html = emailTemplate({ name, email, message });
+    const html = emailTemplate({ firstname, lastname, email, message });
 
     await transporter.sendMail({
       from: `Nytt kundmejl <info@nordiskdev.se>` ,
       to: 'info@nordiskdev.se',
-      subject: `Nytt mail från ${name}`,
+      subject: `Nytt mail från ${firstname} ${lastname }`,
       replyTo: email,
       html,
     });
@@ -33,7 +33,7 @@ export async function POST(request: Request) {
       to: email,
       subject: 'Tack för ditt meddelande',
       replyTo: 'allewi@live.se',
-      text: `Hej ${name},\n\nTack för ditt meddelande! Vi kommer att återkomma till dig så snart som möjligt.\n\nMed vänliga hälsningar,\nNordDev Teamet`,
+      text: `Hej ${firstname} ${lastname},\n\nTack för ditt meddelande! Vi kommer att återkomma till dig så snart som möjligt.\n\nMed vänliga hälsningar,\nNordDev Teamet`, // Gör om till HTML för att inkludera HTML-formatering
     });
 
     console.log("Mail skickat!");
