@@ -2,7 +2,8 @@
 import Sektion from "@/components/custom/sektion";
 import React from "react";
 import Hero from "@/components/custom/hero";
-import { metadata } from "./layout";
+
+import Partner from "@/components/custom/partner";
 
 
 
@@ -30,6 +31,7 @@ export default function Home() {
     <div className="" >
       <Hero title='ER VISION' span='VÅR UTMANING' subheading='Din Techpartner I Södra Sverige'/>
       <Sektion data={MetaData} />
+      <Partner />
       {/* <Sektion data={about} />   */}
     </div>
   );

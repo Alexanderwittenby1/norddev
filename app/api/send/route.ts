@@ -21,19 +21,19 @@ export async function POST(request: Request) {
     const html = emailTemplate({ firstname, lastname, email, message });
 
     await transporter.sendMail({
-      from: `Nytt kundmejl <info@nordiskdev.se>` ,
-      to: 'info@nordiskdev.se',
+      from: `Nytt kundmejl <kontakt@nordiskdev.se>` ,
+      to: 'kontakt@nordiskdev.se',
       subject: `Nytt mail från ${firstname} ${lastname }`,
       replyTo: email,
       html,
     });
 
     await transporter.sendMail({
-      from: 'NordDev Teamet <info@nordiskdev.se>',
+      from: 'NordDev Teamet <kontakt@nordiskdev.se>',
       to: email,
       subject: 'Tack för ditt meddelande',
-      replyTo: 'allewi@live.se',
-      text: `Hej ${firstname} ${lastname},\n\nTack för ditt meddelande! Vi kommer att återkomma till dig så snart som möjligt.\n\nMed vänliga hälsningar,\nNordDev Teamet`, // Gör om till HTML för att inkludera HTML-formatering
+      replyTo: `${email}`,
+      text: `Hej ${firstname} ${lastname},\n\nTack för ditt meddelande! Vi kommer att återkomma till dig så snart som möjligt.\n\nMed vänliga hälsningar,\nNordDev Teamet`, 
     });
 
     console.log("Mail skickat!");

@@ -46,7 +46,7 @@ const Navbar = () => {
         >
           <NavigationMenuItem className="flex items-center flex-col sm:flex-row ">
             <Link href="/kontakt">
-              <NavigationMenuLink className={navigationMenuTriggerStyle() + " text-white font-bold border-2 bg-red-500 border-black hover:scale-105 transition-all duration-200 ease-in-out"}>
+              <NavigationMenuLink className={navigationMenuTriggerStyle() + " text-white font-bold border-2 bg-[#b697ec] border-black hover:scale-105 transition-all duration-200 ease-in-out text-shadow-2xs"}>
                 Kontakta oss
               </NavigationMenuLink>
             </Link>

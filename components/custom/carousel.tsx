@@ -14,7 +14,8 @@ const Karusell = () => {
         Autoplay({ delay: 5000, stopOnInteraction: true })
       )
     return (
-        <div className="h-full justify-center items-center flex ">
+        <div className="h-[800px
+        ] justify-center items-center flex ">
         
         <Carousel
             plugins={[plugin.current]}
@@ -27,6 +28,8 @@ const Karusell = () => {
             image='/milad.jpg'
             description='Erik '
             info={['C++','React.js','Next.js','TypeScript','SQL']} /></CarouselItem>
+
+
             <CarouselItem className="lg:basis-1/3 md:basis-1/2 basis-full">
                 <ProfileCard 
                 name='Isak Klaesson'
@@ -34,6 +37,8 @@ const Karusell = () => {
                 description='Isak '
                 info={['C++','React.js','Next.js','TypeScript','SQL']} />
             </CarouselItem>
+
+
             <CarouselItem className="lg:basis-1/3 md:basis-1/2 basis-full">
                 <ProfileCard 
                 name='Alexander Wittenby'
@@ -41,18 +46,20 @@ const Karusell = () => {
                 description='Alexander'
                 info={['Python','React.js','Next.js','TypeScript','SQL','Express']}/>
             </CarouselItem>
+
+
+        
             <CarouselItem className="lg:basis-1/3 md:basis-1/2 basis-full">
                 <ProfileCard 
-                name='Johan Olofsson'
-                image='/milad.jpg'
-                description='Johan'
-                info={['C++','React.js','Next.js','TypeScript','SQL']}/>
+                name='Majken'
+                image='/majken.jpg'
+                description='Majken hund' 
+                info={['Skälla', 'Vara söt', 'Vara jobbig']}/>
             </CarouselItem>
+
             </CarouselContent>
             <CarouselPrevious />
             <CarouselNext />
-            
-
         </Carousel>
         </div>
     )

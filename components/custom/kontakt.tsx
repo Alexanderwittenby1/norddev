@@ -14,6 +14,7 @@ import {
   FormMessage,
 } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
+import { motion } from 'framer-motion'
 
 
 
@@ -60,7 +61,10 @@ export function KontaktForm() {
   return (
     <div className="flex justify-center items-center min-h-screen bg-gradient-to-br py-8 ">
       <div className="flex flex-col-reverse md:flex-row gap-8 items-center w-full max-w-5xl">
-        <div className="text-black  px-6 py-4 max-w-[600px]">
+        <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        className="text-black px-6 py-4 max-w-[600px] ">
           <h1 className="text-4xl font-bold mb-4">Kontakta oss</h1>
           <p className="text-gray-700 mb-2">Har du frågor eller funderingar? Fyll i formuläret nedan så återkommer vi så snart som möjligt.</p>
           <div className="flex items-center gap-2 mb-2">
@@ -84,7 +88,7 @@ export function KontaktForm() {
             </a>
           </div>
           <p className="text-gray-500 mt-2">Vi ser fram emot att höra från dig!</p>
-        </div>
+        </motion.div>
         <div className="w-full max-w-lg bg-white/90  p-8">
         <h2 className="text-3xl font-bold text-center text-black mb-6">Kontaktformulär</h2>
         <Form {...form}>

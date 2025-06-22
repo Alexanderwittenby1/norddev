@@ -21,7 +21,7 @@ const profileCard = ({name, image, description,info}: ProfileCardProps) => {
   return (
     <div>
         <div className="mt-14 shadow-lg rounded-lg p-8 max-w-sm mx-auto select-none ">
-            <div className={`relative h-[200px] flex items-center justify-left ${randomColor}  border-b-2 border-gray-200 rounded-r-2xl rounded-tl-4xl rounded-bl-2xl`}>
+            <div className={`relative h-[300px] flex items-center justify-left ${randomColor}  border-b-2 border-gray-200 rounded-r-2xl rounded-tl-4xl rounded-bl-2xl`}>
                 <img
                     src={image}
                     alt="Profile Picture"
@@ -32,7 +32,7 @@ const profileCard = ({name, image, description,info}: ProfileCardProps) => {
                     <span className="text-gray-600 text-sm">{description}</span>
                 </p>
                 {info && info.length > 0 && (
-                    <div className={`absolute bg-violet-300 mt-2 justify-start bottom-0 left-0  p-2 rounded-b-2xl w-full `}> 
+                    <div className={`absolute bg-white mt-2 justify-start bottom-0 left-0  p-2 rounded-b-2xl w-full  `}> 
                         
                         <ul className="list-none text-gray-700 flex flex-row md:flex-row sm:flex-row flex-wrap items-start gap-2">
                             {info.map((skill, index) => (

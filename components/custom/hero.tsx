@@ -44,7 +44,7 @@ export default function Hero({ title, span,subheading }: HeroProps) {
       
       <div className="absolute inset-0 z-10 flex flex-col items-center justify-center">
         <h1 className="font-bold text-white text-4xl md:text-6xl text-center select-none drop-shadow-lg">
-          {title} <span className="text-[#b697ec]">{span}</span>
+          {title} <span className="text-[#b697ec] text-shadow-accent">{span}</span>
         </h1>
         <p className="text-white mt-4 text-lg font-bold">{subheading}</p>
       </div>

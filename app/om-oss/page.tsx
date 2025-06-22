@@ -1,18 +1,18 @@
 
 import React from 'react'
 import Hero from '@/components/custom/hero'
-import Karusell from '@/components/custom/carousel'
+import Utvecklare from '@/components/custom/utvecklare'
 
 
 export default function Page() {
   
   return (
     <div className="relative ">
-      <Hero 
+     
+      < Utvecklare />
+
       
-      title='VÅRA' 
-      span='UTVECKLARE'/>
-      <Karusell/>
+      
     </div>
   )
 }

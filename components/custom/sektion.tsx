@@ -1,7 +1,7 @@
 "use client";
 import { motion } from 'framer-motion'
 import React from 'react'
-import Image from "next/image";
+
 
 type MetaDataType = {
   title: string;
@@ -17,13 +17,15 @@ export default function Sektion({data}: { data: MetaDataType }) {
 
 
   return (
-    <section className={`bg-[url(${data.backgroundImage})] py-16 bg-cover bg-center bg-no-repeat`}>
-      {/* Bakgrundsbild */}
-      <div className="container mx-auto px-4 w-screen py-16 ">
+    <section 
+    className={`py-16 bg-cover bg-center bg-no-repeat`}
+    style={{ backgroundImage: `url(${data.backgroundImage}) ` }}>
+    
+      <div className="container mx-auto px-4 w-screen py-16 h-screen ">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center ">
           {/* Vänster: Tjänster */}
           <div>
-            <h2 className="text-3xl font-bold text-left mb-8 border-b shadow-2xs">VÅRA TJÄNSTER</h2>
+            <h2 className="text-3xl font-bold text-left mb-8 border-b shadow-2xs text-white">VÅRA TJÄNSTER</h2>
             <div className="space-y-4 ">
               <motion.div
                 initial={{ opacity: 0, y: 40 }}
@@ -72,34 +74,11 @@ export default function Sektion({data}: { data: MetaDataType }) {
               </motion.div>
             </div>
           </div>
-          {/* Högersektion: bilder */}
-          {/* <div className="hidden md:flex flex-col gap-8 items-center ">
-            <motion.div
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.6 }}
-              viewport={{ once: false }}
-              className='flex flex-col gap-8 items-center'
-            >
-            <Image
-              src="/NordDev.png"
-              alt="NordDev"
-              width={300}
-              height={300}
-              className="rounded-lg shadow"
-            />
-            <Image
-              src="/milad.jpg"
-              alt="Milad"
-              width={300}
-              height={300}
-              className="rounded-lg shadow"
-            />
-            </motion.div>
+          
             
-          </div> */}
+          </div> 
         </div>
-      </div>
+      
     </section>
   )
 }
