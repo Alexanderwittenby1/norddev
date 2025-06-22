@@ -10,8 +10,8 @@ import Partner from "@/components/custom/partner";
 
 export default function Home() {
   const MetaData = {
-    title: "NordDev",
-    description: "Vi på NordDev",
+    title: "Nordiskdev",
+    description: "Vi är Nordiskdev, din techpartner i södra Sverige. Vi erbjuder skräddarsydda lösningar inom apputveckling, webbutveckling och konsulttjänster.",
     Apputveckling: "Mer information om apputveckling kommer snart.",
     Webbutveckling: "Mer information om webbutveckling kommer snart.",
     konsultering: "Mer information om konsulttjänster kommer snart.",
@@ -31,7 +31,7 @@ export default function Home() {
     <div className="" >
       <Hero title='ER VISION' span='VÅR UTMANING' subheading='Din Techpartner I Södra Sverige'/>
       <Sektion data={MetaData} />
-      <Partner />
+      {/* <Partner /> */}
       {/* <Sektion data={about} />   */}
     </div>
   );

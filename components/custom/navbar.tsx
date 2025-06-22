@@ -19,7 +19,7 @@ const Navbar = () => {
       <Link href="/">
         <div className="flex items-center">
           <Image 
-            src="/NordDev.png"
+            src="/nordiskdev.png"
             alt="NordDev Logo"
             width={50}
             height={50}
