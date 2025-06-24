@@ -18,8 +18,30 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "NordDev",
-  description: "Vi på NordDev",
+  title: "NordiskDev",
+  description: "Vi på NordiskDev bygger moderna digitala lösningar.",
+  openGraph: {
+    title: "NordiskDev",
+    description: "Vi på NordDev bygger moderna digitala lösningar.",
+    url: "https://www.nordiskdev.se", 
+    siteName: "NordDev",
+    images: [
+      {
+        url: "https://www.norddev.se/nordiskdev.png", 
+        width: 1200,
+        height: 630,
+        alt: "NordDev logotyp eller hero-bild",
+      },
+    ],
+    locale: "sv_SE",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "NordiskDev",
+    description: "Vi på NordiskDev bygger moderna digitala lösningar.",
+    images: ["https://www.nordiskdev.se/nordiskdev.png"],
+  },
 };
 
 

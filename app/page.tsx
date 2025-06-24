@@ -18,14 +18,7 @@ export default function Home() {
     backgroundImage: "/björkis.jpg",
   };
 
-  // const about = {
-  //   title: "Om oss",
-  //   description: "Vi är NordDev, din techpartner i södra Sverige. Vi erbjuder skräddarsydda lösningar inom apputveckling, webbutveckling och konsulttjänster. ",
-  //   Apputveckling: "Vi skapar användarvänliga och funktionella appar som möter dina behov.",
-  //   Webbutveckling: "Vi bygger moderna och responsiva webbplatser som hjälper dig att nå dina mål.",
-  //   konsultering: "Våra erfarna konsulter erbjuder expertis inom olika teknikområden för att hjälpa dig att optimera din verksamhet.",
-  // };
- 
+  
 
   return (
     <div className="" >
