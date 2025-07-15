@@ -47,6 +47,8 @@ export const metadata: Metadata = {
 
 
 
+
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -61,7 +63,7 @@ export default function RootLayout({
         <SpeedInsights/>
         <ScrollToTopOnRouteChange />
         <Navbar />
-        <main className="flex-grow">
+        <main className="grow-1">
           {children}
         </main>
         <Footer />
