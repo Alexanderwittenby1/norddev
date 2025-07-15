@@ -16,7 +16,7 @@ const team = [
   {
     name: 'Alexander',
     title: 'Webbutvecklare',
-    img: '/milad.jpg',
+    img: '/alex.jpg',
     info: "Frontend-fantast som brinner för användarupplevelse och visuell design. Jobbar helst i React och Next.js, gärna med fokus på detaljer och ett tydligt, modernt gränssnitt. Ser till att det inte bara funkar – det ska också kännas bra att använda."
   },
 ]
@@ -25,7 +25,7 @@ const Utvecklare = () => {
   return (
     <div className="flex flex-col items-center min-h-screen bg-gradient-to-b from-gray-100 to-white py-24 ">
       <div className="w-full max-w-7xl mb-12 lg:px-6 px-6 2xl:px-0 ">  
-        <h1 className="text-2xl font-bold text-left leading-8 max-w-xl text-blue-500">
+        <h1 className="text-2xl font-bold text-left leading-8 max-w-xl text-black-500">
           Vi är tre engagerade och nyfikna sistaårsstudenter med en gemensam passion för teknik, problemlösning och att skapa digitala lösningar som gör skillnad.
         </h1>
       </div>
@@ -34,7 +34,7 @@ const Utvecklare = () => {
           {team.map((person) => (
             <div
               key={person.name}
-              className="bg-white rounded-xl ring-2 ring-blue-800/50 flex flex-col items-center p-8 w-100 mx-auto"
+              className="bg-white rounded-xl ring-2 ring-black-800/50 flex flex-col items-center p-8 w-100 mx-auto"
             >
               <img
                 src={person.img}
