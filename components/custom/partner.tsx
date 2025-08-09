@@ -2,6 +2,23 @@
 import { motion } from 'framer-motion'
 import React from 'react'
 
+// Definera interface
+interface AnimationValues {
+  initial: { opacity: number; y: number };
+  whileInView: { opacity: number; y: number };
+  transition: { duration: number };
+  viewport: { once: boolean };
+}
+
+// Definiera konstanter så att de kan återanvändas
+const animationValues: AnimationValues = {
+  initial: { opacity: 0, y: -75 },
+  whileInView: { opacity: 1, y: 0 },
+  transition: { duration: 0.25 },
+  viewport: { once: true }
+}
+
+
 export default function Partner() {
   return (
     <div className='min-h-screen bg-gradient-to-b from-gray-100 to-white py-24'>
@@ -17,10 +34,10 @@ export default function Partner() {
         <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
           {/* Webbutveckling - tar hela bredden */}
           <motion.div
-            initial={{ opacity: 0, y: -75 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.25 }}
-            viewport={{ once: true }}
+            initial={animationValues.initial}
+            whileInView={animationValues.whileInView}
+            transition={animationValues.transition}
+            viewport={animationValues.viewport}
             className='bg-white rounded-2xl  border-black/90 border-[2px] p-4 md:col-span-2'
           >
             <h3 className='text-xl font-bold mb-4'>Webbutveckling</h3>

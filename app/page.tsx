@@ -3,8 +3,8 @@ import Sektion from "@/components/custom/sektion";
 import React from "react";
 import Hero from "@/components/custom/hero";
 import Partner from "@/components/custom/partner";
-
-
+import ResourceSektion from "@/components/custom/resourceSektion";
+import ScrollAnimation from "@/components/custom/scrollAnimation";
 
 
 
@@ -27,7 +27,9 @@ export default function Home() {
       <Hero title='ER VISION' span='VÅR UTMANING' subheading='Din Techpartner I Södra Sverige'/>
       <Sektion data={MetaData} />
       <Partner />
-     
+      {/* <ResourceSektion /> */}
+      <ScrollAnimation />
+
     </div>
   );
 }

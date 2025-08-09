@@ -120,3 +120,8 @@
     @apply bg-background text-foreground;
   }
 }
+
+.rubriker{
+  padding-left: 4px;
+  color: red;
+}
