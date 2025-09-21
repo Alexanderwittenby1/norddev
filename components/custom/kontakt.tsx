@@ -90,7 +90,7 @@ export function KontaktForm() {
           <p className="text-gray-500 mt-2">Vi ser fram emot att höra från dig!</p>
         </motion.div>
         <div className="w-full max-w-lg bg-white/90  p-8">
-        <h2 className="text-3xl font-bold text-center text-black mb-6">Kontaktformulär</h2>
+        <h2 className="text-3xl font-bold text-center text-black mb-6 pt-12">Kontaktformulär</h2>
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-5">
             <FormField 

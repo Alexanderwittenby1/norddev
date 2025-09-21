@@ -30,11 +30,11 @@ const Utvecklare = () => {
         </h1>
       </div>
       <div className="w-full max-w-7xl">
-        <div className="grid grid-cols-1 xl:grid-cols-3 gap-8 sm:grid-cols-1  ">
+        <div className="grid grid-cols-1 xl:grid-cols-3 gap-8 sm:grid-cols-1 md:grid-cols-2">
           {team.map((person) => (
             <div
               key={person.name}
-              className="bg-white rounded-xl ring-2 ring-black-800/50 flex flex-col items-center p-8 w-100 mx-auto"
+              className="bg-white flex flex-col items-center p-8 mx-auto"
             >
               <img
                 src={person.img}
@@ -45,13 +45,15 @@ const Utvecklare = () => {
               <p className="text-gray-600">{person.title}</p>
               <p className="text-gray-500 mt-4 text-center">{person.info}</p>
               <div className="flex flex-wrap justify-center gap-2 mt-2 text-sm font-medium text-gray-700">
-                <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full">TypeScript</span>
-                <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full">React</span>
-                <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full">Next.js</span>
-                <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full">Node.js</span>
-                <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full">Tailwind CSS</span>
-                <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full">GraphQL</span>
-                
+                <span className="bg-[var(--accent)] text-white px-3 py-1 rounded-full">TypeScript</span>
+                <span className="bg-[var(--accent)] text-white px-3 py-1 rounded-full">React</span>
+                <span className="bg-[var(--accent)] text-white px-3 py-1 rounded-full">Next.js</span>
+                <span className="bg-[var(--accent)] text-white px-3 py-1 rounded-full">Node.js</span>
+                <span className="bg-[var(--accent)] text-white px-3 py-1 rounded-full">Tailwind CSS</span>
+                <span className="bg-[var(--accent)] text-white px-3 py-1 rounded-full">GraphQL</span>
+                <span className={person.name == "Isak" ? "bg-[var(--accent)] text-white px-3 py-1 rounded-full" : "hidden"}>C++</span>
+                <span className={person.name == "Erik" ? "bg-[var(--accent)] text-white px-3 py-1 rounded-full" : "hidden"}>C++</span>
+
               </div>
             </div>
           ))}

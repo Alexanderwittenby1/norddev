@@ -6,7 +6,7 @@ export default function Partner() {
   return (
     <div className='min-h-screen bg-gradient-to-b from-gray-100 to-white py-24'>
       <div className='w-full max-w-7xl mx-auto px-4 2xl:px-0'>
-        <h1 className='text-3xl font-bold text-left mb-4 px-4'>Vad gör vi<span className='text-red-500'>?</span></h1>
+        <h1 className='text-3xl font-bold text-left mb-4 px-4'>VAD GÖR VI<span className='text-red-500'>?</span></h1>
         
         {/* Kort introduktion */}
         <p className='text-gray-700 mb-6 w-full max-w-2xl px-4'>
@@ -55,11 +55,12 @@ export default function Partner() {
             <p className='text-gray-700 pt-2'>
               Hos oss får du stöd genom hela processen – från inspiration och idégenerering till design, utveckling och lansering.
             </p>
-            <div className='flex flex-wrap justify-left gap-2 mt-2 text-sm font-medium text-gray-700 pt-18'>
-              <span className='bg-black text-white px-3 py-1 rounded-md'>React Native</span>
-              <span className='bg-black text-white px-3 py-1 rounded-md'>TypeScript</span>
-              <span className='bg-black text-white px-3 py-1 rounded-md'>Node.js</span>
-            </div>
+            <motion.div className='flex flex-wrap justify-left gap-2 mt-2 text-sm font-medium text-gray-700 pt-38'>
+              {/*Jiggle animation while hovering*/}
+              <motion.span onClick={() => {window.location.href = "https://reactnative.dev/"}} whileHover={{ scale: 1.05 }} className='bg-black text-white px-3 py-1 rounded-md'>React Native</motion.span>
+              <motion.span onClick={() => {window.location.href = "https://www.typescriptlang.org/"}} whileHover={{ scale: 1.05 }} className='bg-black text-white px-3 py-1 rounded-md'>TypeScript</motion.span>
+              <motion.span onClick={() => {window.location.href = "https://nodejs.org/"}} whileHover={{ scale: 1.05 }} className='bg-black text-white px-3 py-1 rounded-md'>Node.js</motion.span>
+            </motion.div>
           </motion.div>
 
           {/* Konsulttjänster */}

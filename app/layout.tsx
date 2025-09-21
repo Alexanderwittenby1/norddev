@@ -7,6 +7,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next"
 import Hero from "@/components/custom/hero";
 import ScrollToTopOnRouteChange from "@/components/custom/ScrollToTopOnRouteChange";
 import { Analytics } from "@vercel/analytics/next"
+import { ViewTransitions } from "next-view-transitions";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -55,11 +56,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="h-full">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased select-none min-h-screen flex flex-col h-full`}
-      >
-        <Analytics/>
+    <ViewTransitions>
+      <html lang="en" className="h-full">
+        <body
+          className={`${geistSans.variable} ${geistMono.variable} antialiased select-none min-h-screen flex flex-col h-full`}
+        >
+          <Analytics/>
         <SpeedInsights/>
         <ScrollToTopOnRouteChange />
         <Navbar />
@@ -69,5 +71,6 @@ export default function RootLayout({
         <Footer />
       </body>
     </html>
+    </ViewTransitions>
   );
 }

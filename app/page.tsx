@@ -3,6 +3,8 @@ import Sektion from "@/components/custom/sektion";
 import React from "react";
 import Hero from "@/components/custom/hero";
 import Partner from "@/components/custom/partner";
+import Erbjudande from "@/components/custom/erbjudande";
+import VADVIGR from "@/components/custom/tech-partner";
 
 
 
@@ -24,10 +26,11 @@ export default function Home() {
 
   return (
     <div className="" >
-      <Hero title='ER VISION' span='VÅR UTMANING' subheading='Din Techpartner I Södra Sverige'/>
+      <Hero />
       <Sektion data={MetaData} />
       <Partner />
-     
+      {/* <Erbjudande/>
+      <VADVIGR/> */}
     </div>
   );
 }
