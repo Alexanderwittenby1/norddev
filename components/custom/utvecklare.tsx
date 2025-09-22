@@ -2,7 +2,7 @@ import React from 'react'
 
 const team = [
   {
-    name: 'Erik',
+    name: 'Erik123',
     title: 'Software Engineer',
     img: '/erik.jpg',
     info: "Software engineer med ett hjärta för struktur och prestanda. Har koll på hela stacken men trivs extra bra i backend-miljöer där logiken sitter i centrum. Kodar helst i TypeScript och gillar att bygga robusta, skalbara lösningar som håller i längden." // Byt till egen bild
