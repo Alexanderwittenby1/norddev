@@ -2,13 +2,13 @@
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  	"content": [
+  	content: [
     		"./pages/**/*.{js,ts,jsx,tsx}",
     		"./components/**/*.{js,ts,jsx,tsx}",
             "./app/**/*.{js,ts,jsx,tsx}"
   	],
-  	"theme": {
-				"extend": {
+  	theme: {
+				extend: {
 					"colors": {
 						"gray": "#f8fcff",
 						"red": "#ff0000",
@@ -16,7 +16,7 @@ module.exports = {
 						"black": "#000",
 						"slateblue": "#543aab"
 					},
-					"fontFamily": {
+					fontFamily: {
 						"roboto-mono": ["Roboto Mono", "monospace"],
 						"roboto-condensed": ["Roboto Condensed", "sans-serif"],
 						"roboto": ["Roboto", "sans-serif"],
@@ -24,7 +24,8 @@ module.exports = {
 					}
 				}
   	},
-  	"corePlugins": {
+  	corePlugins: {
     		"preflight": false
-  	}
-}
+  	},
+	darkMode: 'class',
+}	

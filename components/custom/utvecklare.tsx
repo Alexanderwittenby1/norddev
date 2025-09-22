@@ -25,8 +25,8 @@ const Utvecklare = () => {
   return (
     <div className="flex flex-col items-center min-h-screen bg-gradient-to-b from-gray-100 to-white py-24 ">
       <div className="w-full max-w-7xl mb-12 lg:px-6 px-6 2xl:px-0 ">  
-        <h1 className="text-2xl font-bold text-left leading-8 max-w-xl text-black-500">
-          Vi är tre engagerade och nyfikna sistaårsstudenter med en gemensam passion för teknik, problemlösning och att skapa digitala lösningar som gör skillnad.
+        <h1 className="text-2xl  text-left leading-8 max-w-xl text-black-500 px-12">
+          Nordisk<span className='text-[var(--accent)]'>Team.</span>
         </h1>
       </div>
       <div className="w-full max-w-7xl">

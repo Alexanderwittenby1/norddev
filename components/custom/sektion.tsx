@@ -18,7 +18,7 @@ export default function Sektion({data}: { data: MetaDataType }) {
 
   return (
     <section 
-    className={`py-16 bg-cover bg-center bg-no-repeat`}
+    className={`py-16 bg-cover bg-center bg-no-repeat border-b-12 border-red-500`}
     style={{ backgroundImage: `url(${data.backgroundImage}) ` }}>
     
       <div className="container mx-auto px-4 w-screen py-16 h-screen ">
@@ -31,8 +31,8 @@ export default function Sektion({data}: { data: MetaDataType }) {
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
-                viewport={{ once: false }}
-                className="bg-white p-6 rounded-lg shadow-md hover:scale-105 transition-all duration-200 ease-in-out hover:bg-gray-100"
+                viewport={{ once: true }}
+                className="bg-white p-6 rounded-lg shadow-md duration-200 ease-in-out hover:bg-gray-100"
               >
                 <h3 className="text-xl font-semibold mb-4">Konsultering</h3>
                 <p className="text-gray-700">
@@ -46,8 +46,8 @@ export default function Sektion({data}: { data: MetaDataType }) {
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                viewport={{ once: false }}
-                className="bg-white p-6 rounded-lg shadow-md hover:scale-105 transition-all duration-200 ease-in-out hover:bg-gray-200"
+                viewport={{ once: true }}
+                className="bg-white p-6 rounded-lg shadow-md duration-200 ease-in-out hover:bg-gray-200"
               >
                 <h3 className="text-xl font-semibold mb-4">Webbutveckling</h3>
                 <p className="text-gray-700">
@@ -61,8 +61,8 @@ export default function Sektion({data}: { data: MetaDataType }) {
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.4 }}
-                viewport={{ once: false }}
-                className="bg-white p-6 rounded-lg shadow-md hover:scale-105 transition-all duration-200 ease-in-out hover:bg-gray-300 "
+                viewport={{ once: true }}
+                className="bg-white p-6 rounded-lg shadow-md duration-200 ease-in-out hover:bg-gray-300 "
               >
                 <h3 className="text-xl font-semibold mb-4">Apputveckling</h3>
                 <p className="text-gray-700">

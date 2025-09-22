@@ -3,21 +3,31 @@ import type { NextPage } from 'next';
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from 'react';
+import { Moon, Sun } from "lucide-react"
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu"
+import { useTheme } from "next-themes"
 
 const Navbar: NextPage = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const { theme, setTheme } = useTheme();
+
   return (
     <>
       {/* Desktop navbar */}
-      <div className="w-full relative bg-white overflow-hidden flex flex-row items-center justify-between py-6 px-[120px] box-border gap-0 text-left text-lg text-black font-roboto-mono min-h-[120px] md:flex hidden border-b border-gray-200">
+      <div className="w-full relative bg-white  overflow-hidden flex flex-row items-center justify-between py-6 px-[120px] box-border gap-0 text-left text-lg text-black font-roboto-mono min-h-[120px] md:flex hidden border-b border-gray-200">
         {/* Logo och namn */}
-        <div className="w-[180px] h-[240px] flex flex-col items-center justify-center">
+        <div className="w-[180px] h-[120px] flex flex-col items-center justify-center">
           <Link href="/" className="block">
-            <div className="flex items-center justify-center w-[210px] h-[240px]">
+            <div className="flex items-center justify-center w-[210px] h-[120px]">
               <Image
                 className="rounded-full object-cover "
                 width={210}
-                height={240}
+                height={120}
                 alt="Logo"
                 src="/Logga.png"
               />

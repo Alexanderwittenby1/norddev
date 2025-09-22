@@ -1,6 +1,6 @@
 import React from 'react'
 
-const page = () => {
+const PrivacyPolicy = () => {
   return (
     <div className='container mx-auto px-4  my-20 h-full '>
         
@@ -31,4 +31,4 @@ const page = () => {
   )
 }
 
-export default page
+export default PrivacyPolicy;

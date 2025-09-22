@@ -2,7 +2,7 @@ import nodemailer from 'nodemailer';
 import emailTemplate from '@/components/custom/email-template';
 
 export async function POST(request: Request) {
-  console.log("POST /api/send called"); 
+ 
 
   const { firstname,lastname, email, message } = await request.json();
   
@@ -33,7 +33,13 @@ export async function POST(request: Request) {
       to: email,
       subject: 'Tack för ditt meddelande',
       replyTo: `${email}`,
-      text: `Hej ${firstname} ${lastname},\n\nTack för ditt meddelande! Vi kommer att återkomma till dig så snart som möjligt.\n\nMed vänliga hälsningar,\nNordDev Teamet`, 
+      text: `Hej ${firstname} ${lastname},\n\nTack för ditt meddelande! Vi kommer att återkomma till dig så snart som möjligt.\n\nMed vänliga hälsningar,\nNordDev Teamet`,
+      attachments: [
+        {
+          filename: "NordDev.png",
+          path: "./public/NordDev.png",
+        },
+      ],
     });
 
     console.log("Mail skickat!");

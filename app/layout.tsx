@@ -8,6 +8,7 @@ import Hero from "@/components/custom/hero";
 import ScrollToTopOnRouteChange from "@/components/custom/ScrollToTopOnRouteChange";
 import { Analytics } from "@vercel/analytics/next"
 import { ViewTransitions } from "next-view-transitions";
+import { ThemeProvider } from "@/components/custom/theme-provider";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -56,21 +57,29 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <ViewTransitions>
-      <html lang="en" className="h-full">
+    <html lang="en" className="h-full  ">
+        {/* <ViewTransitions> */}
         <body
           className={`${geistSans.variable} ${geistMono.variable} antialiased select-none min-h-screen flex flex-col h-full`}
         >
-          <Analytics/>
-        <SpeedInsights/>
-        <ScrollToTopOnRouteChange />
-        <Navbar />
-        <main className="grow-1">
-          {children}
-        </main>
+        {/* <ThemeProvider  */}
+          {/* attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange */}
+        {/* > */}
+
+          <Analytics />
+          <SpeedInsights/>
+          <ScrollToTopOnRouteChange />
+          <Navbar />
+          <main className="grow-1">
+            {children}
+          </main>
         <Footer />
+         {/* </ThemeProvider> */}
       </body>
+    {/* </ViewTransitions> */}
     </html>
-    </ViewTransitions>
   );
 }
