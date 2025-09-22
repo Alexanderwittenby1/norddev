@@ -8,6 +8,8 @@ const team = [
     info: "Software engineer med ett hjärta för struktur och prestanda. Har koll på hela stacken men trivs extra bra i backend-miljöer där logiken sitter i centrum. Kodar helst i TypeScript och gillar att bygga robusta, skalbara lösningar som håller i längden." // Byt till egen bild
   },
   {
+    name: 'Isak',
+    title: 'The best Software Engineer',
     name: 'FIsak',
     title: 'Software Engineer',
     img: '/isak.png',
