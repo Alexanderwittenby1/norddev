@@ -9,6 +9,8 @@ const team = [
   },
   {
     name: 'Isak',
+    title: 'The best Software Engineer',
+    name: 'FIsak',
     title: 'Software Engineer',
     img: '/isak.png',
     info: "Software engineer som gillar problemlösning, teknik och att få olika system att snacka med varandra. Rör sig smidigt mellan frontend och backend och ser alltid till att leverera lösningar som faktiskt skapar värde – inte bara ser bra ut på pappret." // Byt till egen bild
