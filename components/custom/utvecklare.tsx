@@ -9,7 +9,7 @@ const team = [
   },
   {
     name: 'Isak',
-    title: 'Master Software Engineer',
+    title: 'Master 2 Star Software Engineer',
     img: '/isak.png',
     info: "Software engineer som gillar problemlösning, teknik och att få olika system att snacka med varandra. Rör sig smidigt mellan frontend och backend och ser alltid till att leverera lösningar som faktiskt skapar värde – inte bara ser bra ut på pappret." // Byt till egen bild
   },
