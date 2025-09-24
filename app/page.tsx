@@ -10,6 +10,7 @@ import ScrollAnimation from "@/components/custom/scrollAnimation";
 
 
 
+
 export default function Home() {
   const MetaData = {
     title: "Nordiskdev",
@@ -29,6 +30,7 @@ export default function Home() {
       <Partner />
       {/* <ResourceSektion /> */}
       <ScrollAnimation />
+  
 
     </div>
   );
