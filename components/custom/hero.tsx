@@ -1,54 +1,26 @@
-"use client";
-import { motion, useScroll, useTransform } from 'framer-motion';
-import React, { useRef } from 'react';
+import type { NextPage } from 'next';
+import Link from 'next/link';
 
-interface HeroProps {
-  title: string;
-  span: string;
-  subheading?: string;
-}
-
-export default function Hero({ title, span,subheading }: HeroProps) {
-  const ref = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ['start start', 'end start'],
-  })
-  const backgroundY = useTransform(scrollYProgress, [0, 1], ['0%', '100%']);
-  
-  
+const Homepage: NextPage = () => {
   return (
-    <div
-      ref={ref}
-      
-      className="relative w-full h-screen overflow-hidden  ">
-      
-      <motion.div
-        className="absolute inset-0 z-0"
-        style={{
-          backgroundImage: 'url(/full-image.png)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'bottom',
-          y: backgroundY,
-        }}
-      />
-      
-      <div
-        className="absolute inset-0 z-10"
-        style={{
-          backgroundImage: 'url(/Subtract.png)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'bottom',
-        }}
-      />
-      
-      <div className="absolute inset-0 z-10 flex flex-col items-center justify-center">
-        <h1 className="font-bold text-white text-4xl md:text-6xl text-center select-none drop-shadow-lg">
-          {title} <span className="text-[#b697ec] text-shadow-accent">{span}</span>
-        </h1>
-        <p className="text-white mt-4 text-lg font-bold">{subheading}</p>
-      </div>
-    </div>
+    <section
+  className="w-full flex my-4 flex-col items-center justify-center bg-gray px-4 text-center text-4xl text-black font-roboto-mono"
+  style={{ minHeight: 'calc(100vh - 120px)' }} 
+>
+  <div className="max-w-xl w-full flex flex-col items-center justify-center gap-6">
+    <h1 className="w-full text-4xl md:text-5xl font-bold mb-2">Er Vision Vår Utmaning</h1>
+    <p className="w-full text-base md:text-lg mb-6">Vi gör er vision till en verklighet</p>
+    <Link
+      href="/kontakt"
+      className="inline-block text-center text-2xl text-white font-roboto-mono bg-[var(--accent)] rounded-[25px] hover:bg-[var(--accent-dark)] transition-colors duration-300 ease-in-out px-8 py-3 shadow-md"
+    >
+      <span className="text-black font-roboto-mono">Kontakta oss</span>
+    </Link>
+  </div>
+</section>
+
   );
-}
+};
+
+export default Homepage;
 
