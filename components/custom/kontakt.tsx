@@ -150,7 +150,7 @@ export function KontaktForm() {
                 </FormItem>
               )}
             />
-            <Button type="submit" className="w-full bg-amber-900 hover:bg-amber-800 text-white text-lg font-semibold py-2 rounded-lg transition cursor-pointer">
+            <Button type="submit" className="w-full bg-[var(--accent)] text-white text-lg font-semibold py-2 rounded-lg cursor-pointer">
               Skicka
               <FormMessage/>
             </Button>
