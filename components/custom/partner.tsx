@@ -51,9 +51,9 @@ export default function Partner() {
               Med användaren i centrum designar vi lösningar som stärker ditt varumärke och konverterar besökare till kunder.
             </p>
             <div className='flex flex-wrap justify-left gap-2 mt-2 text-sm font-medium text-gray-700 pt-6'>
-              <span className='bg-black text-white px-3 py-1 rounded-md'>React</span>
-              <span className='bg-black text-white px-3 py-1 rounded-md'>Next.js</span>
-              <span className='bg-black text-white px-3 py-1 rounded-md'>Node.js</span>
+              <motion.span onClick={() => {window.location.href = "https://react.dev/"}} whileHover={{ scale: 1.05 }} className="bg-[var(--accent)] text-white px-3 py-1 rounded-full">React</motion.span>
+              <motion.span onClick={() => {window.location.href = "https://nextjs.org/"}} whileHover={{ scale: 1.05 }} className="bg-[var(--accent)] text-white px-3 py-1 rounded-full">Next.js</motion.span>
+              <motion.span onClick={() => {window.location.href = "https://nodejs.org/en"}} whileHover={{ scale: 1.05 }} className="bg-[var(--accent)] text-white px-3 py-1 rounded-full">Node.js</motion.span>
             </div>
           </motion.div>
 
@@ -74,9 +74,9 @@ export default function Partner() {
             </p>
             <motion.div className='flex flex-wrap justify-left gap-2 mt-2 text-sm font-medium text-gray-700 pt-38'>
               {/*Jiggle animation while hovering*/}
-              <motion.span onClick={() => {window.location.href = "https://reactnative.dev/"}} whileHover={{ scale: 1.05 }} className='bg-black text-white px-3 py-1 rounded-md'>React Native</motion.span>
-              <motion.span onClick={() => {window.location.href = "https://www.typescriptlang.org/"}} whileHover={{ scale: 1.05 }} className='bg-black text-white px-3 py-1 rounded-md'>TypeScript</motion.span>
-              <motion.span onClick={() => {window.location.href = "https://nodejs.org/"}} whileHover={{ scale: 1.05 }} className='bg-black text-white px-3 py-1 rounded-md'>Node.js</motion.span>
+              <motion.span onClick={() => {window.location.href = "https://reactnative.dev/"}} whileHover={{ scale: 1.05 }} className='bg-[var(--accent)] text-white px-3 py-1 rounded-full'>React Native</motion.span>
+              <motion.span onClick={() => {window.location.href = "https://www.android.com/"}} whileHover={{ scale: 1.05 }} className='bg-[var(--accent)] text-white px-3 py-1 rounded-full'>Android</motion.span>
+              <motion.span onClick={() => {window.location.href = "https://www.apple.com/os/ios/"}} whileHover={{ scale: 1.05 }} className='bg-[var(--accent)] text-white px-3 py-1 rounded-full'>iOS</motion.span>
             </motion.div>
           </motion.div>
 
@@ -100,10 +100,10 @@ export default function Partner() {
               Vi kan hosta och hantera databasen åt er i molnet – eller hjälpa er sätta upp en lösning på egen server eller valfri hostingplattform. Ni väljer, vi ser till att det fungerar.
             </p>
             <div className='flex flex-wrap justify-left gap-2 mt-2 text-sm font-medium text-gray-700 pt-12'>
-              <span className='bg-black text-white px-3 py-1 rounded-md'>MySQL</span>
-              <span className='bg-black text-white px-3 py-1 rounded-md'>MariaDB</span>
-              <span className='bg-black text-white px-3 py-1 rounded-md'>MongoDB</span>
-              <span className='bg-black text-white px-3 py-1 rounded-md'>Firebase</span>
+            <motion.span onClick={() => {window.location.href = "https://reactnative.dev/"}} whileHover={{ scale: 1.05 }} className='bg-[var(--accent)] text-white px-3 py-1 rounded-full'>MySQL</motion.span>
+              <motion.span onClick={() => {window.location.href = "https://mariadb.org/"}} whileHover={{ scale: 1.05 }} className='bg-[var(--accent)] text-white px-3 py-1 rounded-full'>MariaDB</motion.span>
+              <motion.span onClick={() => {window.location.href = "https://www.mongodb.com"}} whileHover={{ scale: 1.05 }} className='bg-[var(--accent)] text-white px-3 py-1 rounded-full'>MongoDB</motion.span>
+              <motion.span onClick={() => {window.location.href = "https://nodejs.org/"}} whileHover={{ scale: 1.05 }} className='bg-[var(--accent)] text-white px-3 py-1 rounded-full'>Firebase</motion.span>
             </div>
           </motion.div>
 
