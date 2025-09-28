@@ -27,7 +27,7 @@ export default function Home() {
       <Hero />
       <Sektion data={MetaData} />
       <Partner />
-      {/* <ResourceSektion /> */}
+     
       <ScrollAnimation />
 
     </div>
