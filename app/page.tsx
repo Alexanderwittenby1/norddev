@@ -13,23 +13,11 @@ export const metadata = {
 };
 
 
-// [I]Osäker på vad denna gör - kanske ta bort?
 export default function Home() {
-  const MetaData = {
-    title: "Nordiskdev",
-    description: "Vi är Nordiskdev, din techpartner i södra Sverige. Vi erbjuder skräddarsydda lösningar inom apputveckling, webbutveckling och konsulttjänster.",
-    Apputveckling: "Mer information om apputveckling kommer snart.",
-    Webbutveckling: "Mer information om webbutveckling kommer snart.",
-    konsultering: "Mer information om konsulttjänster kommer snart.",
-    backgroundImage: "/björkis.jpg",
-  };
-
-  
 
   return (
     <div className="" >
       <Hero />
-      <Sektion data={MetaData} />
       <Partner />
       {/* <ResourceSektion /> */}
       <ScrollAnimation />
