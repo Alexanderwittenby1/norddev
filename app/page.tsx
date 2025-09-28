@@ -7,9 +7,13 @@ import Partner from "@/components/custom/partner";
 import ScrollAnimation from "@/components/custom/scrollAnimation";
 
 
+export const metadata = {
+  title: "Hem - NordiskDev",
+  description: "Välkommen till NordiskDev - din techpartner i södra Sverige. Vi erbjuder skräddarsydda digitala lösningar.",
+};
 
 
-
+// [I]Osäker på vad denna gör - kanske ta bort?
 export default function Home() {
   const MetaData = {
     title: "Nordiskdev",
