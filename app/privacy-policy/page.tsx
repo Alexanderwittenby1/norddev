@@ -1,3 +1,9 @@
+
+export const metadata = {
+  title: "Integritetspolicy - NordiskDev",
+  description: "Läs NordiskDev:s integritetspolicy om hur vi hanterar och skyddar dina personuppgifter när du använder vår webbplats och våra tjänster.",
+};
+
 import React from 'react'
 
 const PrivacyPolicy = () => {
