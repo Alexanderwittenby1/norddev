@@ -74,7 +74,7 @@ export default function Partner() {
             </p>
             <motion.div className='flex flex-wrap justify-left gap-2 mt-2 text-sm font-medium text-gray-700 pt-38'>
               {/*Jiggle animation while hovering*/}
-              <motion.span onClick={() => {window.location.href = "https://reactnative.dev/"}} whileHover={{ scale: 1.05 }} className='bg-black text-white px-3 py-1 rounded-md'>React Native</motion.span>
+              <motion.span onClick={() => {window.location.href = "https://reactnative.dev/"}} whileHover={{ scale: 1.05 }} className='bg-black text-white px-3 py-1 rounded-md '>React Native</motion.span>
               <motion.span onClick={() => {window.location.href = "https://www.typescriptlang.org/"}} whileHover={{ scale: 1.05 }} className='bg-black text-white px-3 py-1 rounded-md'>TypeScript</motion.span>
               <motion.span onClick={() => {window.location.href = "https://nodejs.org/"}} whileHover={{ scale: 1.05 }} className='bg-black text-white px-3 py-1 rounded-md'>Node.js</motion.span>
             </motion.div>

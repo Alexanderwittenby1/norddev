@@ -35,12 +35,17 @@ export function emailToCustomer({ firstname, lastname }: EmailTemplateProps) {
       <p>Tack för ditt meddelande! Vi har mottagit det och återkommer så snart som möjligt.</p>
       <p>Med vänliga hälsningar,<br/>NordDev Teamet</p>
       
-    </div>
-
-    <div style="padding: 20px;">
-      <a href="https://nordiskdev.se">
+      
+      
+      <div>
+        <a href="https://nordiskdev.se">
         Nordiskdev - Din techpartner i södra Sverige
-      </a>
+        </a><br/>
+        <img src="https://nordiskdev.se/logo-mail.png" width="120" height="100" alt="NordiskDev logga">
+      </div>
+
+      
     </div>
   `;
 }
+
