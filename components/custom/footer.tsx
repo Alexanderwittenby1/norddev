@@ -4,9 +4,9 @@ import Image from "next/image";
 export const Footer = () => {
   return (
     <div >
-      <footer className="bg-[url(/grain.jpg)] bg-cover text-white py-4 flex flex-col justify-end items-start min-h-[160px]">
-        <div className='w-full max-w-7xl mx-auto px-4 2xl:px-0'>
-          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
+      <footer className="bg-[url(/grain.jpg)] bg-cover text-white py-4 flex flex-col justify-center items-start min-h-[260px]">
+        <div className='w-full mx-auto px-4 2xl:px-0 flex justify-evenly items-center '>
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-8 '>
             <div className="container mx-auto flex flex-col items-start space-y-2">
               <p className="text-sm">
                 &copy; {new Date().getFullYear()} NordDev. All rights reserved.
@@ -31,3 +31,14 @@ export const Footer = () => {
     </div>
   )
 }
+
+
+
+
+
+
+
+
+
+
+
