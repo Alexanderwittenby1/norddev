@@ -1,6 +1,7 @@
 "use client"
 import { motion } from 'framer-motion'
 import React from 'react'
+import Badge from '@/components/custom/badge';
 
 
 interface AnimationValues {
@@ -51,9 +52,9 @@ export default function Partner() {
               Med användaren i centrum designar vi lösningar som stärker ditt varumärke och konverterar besökare till kunder.
             </p>
             <div className='flex flex-wrap justify-left gap-2 mt-2 text-sm font-medium text-gray-700 pt-6'>
-              <span className='bg-black text-white px-3 py-1 rounded-md'>React</span>
-              <span className='bg-black text-white px-3 py-1 rounded-md'>Next.js</span>
-              <span className='bg-black text-white px-3 py-1 rounded-md'>Node.js</span>
+              <Badge text="React" link="https://react.dev/" />
+              <Badge text="Next.js" link="https://nextjs.org/" />
+              <Badge text="Node.js" link="https://nodejs.org/en" />
             </div>
           </motion.div>
 
@@ -73,10 +74,12 @@ export default function Partner() {
               Hos oss får du stöd genom hela processen – från inspiration och idégenerering till design, utveckling och lansering.
             </p>
             <motion.div className='flex flex-wrap justify-left gap-2 mt-2 text-sm font-medium text-gray-700 pt-38'>
-              {/*Jiggle animation while hovering*/}
-              <motion.span onClick={() => {window.location.href = "https://reactnative.dev/"}} whileHover={{ scale: 1.05 }} className='bg-black text-white px-3 py-1 rounded-md '>React Native</motion.span>
-              <motion.span onClick={() => {window.location.href = "https://www.typescriptlang.org/"}} whileHover={{ scale: 1.05 }} className='bg-black text-white px-3 py-1 rounded-md'>TypeScript</motion.span>
-              <motion.span onClick={() => {window.location.href = "https://nodejs.org/"}} whileHover={{ scale: 1.05 }} className='bg-black text-white px-3 py-1 rounded-md'>Node.js</motion.span>
+              
+
+              <Badge text="React Native" link="https://reactnative.dev/" />
+              <Badge text="Android" link="https://www.android.com/" />
+              <Badge text="iOS" link="https://www.apple.com/os/ios/" />            
+
             </motion.div>
           </motion.div>
 
@@ -100,10 +103,10 @@ export default function Partner() {
               Vi kan hosta och hantera databasen åt er i molnet – eller hjälpa er sätta upp en lösning på egen server eller valfri hostingplattform. Ni väljer, vi ser till att det fungerar.
             </p>
             <div className='flex flex-wrap justify-left gap-2 mt-2 text-sm font-medium text-gray-700 pt-12'>
-              <span className='bg-black text-white px-3 py-1 rounded-md'>MySQL</span>
-              <span className='bg-black text-white px-3 py-1 rounded-md'>MariaDB</span>
-              <span className='bg-black text-white px-3 py-1 rounded-md'>MongoDB</span>
-              <span className='bg-black text-white px-3 py-1 rounded-md'>Firebase</span>
+              <Badge text="MySQL" link="https://www.mysql.com/" />
+              <Badge text="Mariadb" link="https://mariadb.org/" />
+              <Badge text="Mongodb" link="https://www.mongodb.com/" />
+              <Badge text="Firebase" link="https://firebase.google.com/" />
             </div>
           </motion.div>
 
