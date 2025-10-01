@@ -1,12 +1,12 @@
 import nodemailer from 'nodemailer';
-import {emailToCustomer, emailToTeam, EmailPreview} from '@/components/custom/email-template';
+import {emailToCustomer, emailToTeam} from '@/components/custom/email-template';
 
 export async function POST(request: Request) {
  
 
   const { firstname,lastname, email, message } = await request.json();
   
-  // comment
+  
   const transporter = nodemailer.createTransport({
     host: process.env.SMTP_HOST,
     port: 465,

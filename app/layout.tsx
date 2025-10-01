@@ -58,17 +58,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="h-full  ">
-        {/* <ViewTransitions> */}
+        <ViewTransitions>
         <body
           className={`${geistSans.variable} ${geistMono.variable} antialiased select-none min-h-screen flex flex-col h-full`}
         >
-        {/* <ThemeProvider  */}
-          {/* attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange */}
-        {/* > */}
-
           <Analytics />
           <SpeedInsights/>
           <ScrollToTopOnRouteChange />
@@ -77,9 +70,9 @@ export default function RootLayout({
             {children}
           </main>
         <Footer />
-         {/* </ThemeProvider> */}
+         
       </body>
-    {/* </ViewTransitions> */}
+    </ViewTransitions>
     </html>
   );
 }
