@@ -18,8 +18,8 @@ export default function Sektion({data}: { data: MetaDataType }) {
 
   return (
     <section 
-    className={`py-16 bg-cover bg-center bg-no-repeat border-b-12 border-red-500`}
-    style={{ backgroundImage: `url(${data.backgroundImage}) ` }}>
+    className={`py-16 bg-cover bg-center bg-no-repeat border-b-128 border-red-500`}
+    style={{ backgroundImage: `url(${data.backgroundImage})`, clipPath: 'polygon(0 0, 100% 0, 900% 100%, 0 100%)'}}>
     
       <div className="container mx-auto px-4 w-screen py-16 h-screen ">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center ">

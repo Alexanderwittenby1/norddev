@@ -19,7 +19,6 @@ export default function Home() {
     <div className="" >
       <Hero />
       <Partner />
-      {/* <ResourceSektion /> */}
       <ScrollAnimation />
 
     </div>

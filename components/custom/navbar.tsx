@@ -3,18 +3,11 @@ import type { NextPage } from 'next';
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from 'react';
-import { Moon, Sun } from "lucide-react"
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
-import { useTheme } from "next-themes"
+
 
 const Navbar: NextPage = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-  const { theme, setTheme } = useTheme();
+  
 
   return (
     <>
@@ -44,11 +37,11 @@ const Navbar: NextPage = () => {
       <div className="w-full flex items-center justify-between py-4 px-6 bg-white md:hidden">
         {/* Logga till vänster */}
         <Link href="/" className="block">
-          <div className="flex items-center justify-center w-[60px] h-[60px]">
+          <div className="flex items-center justify-evenly ">
             <Image
-              className="rounded-full object-cover"
-              width={60}
-              height={60}
+            
+              width={220}
+              height={20}
               alt="Logo"
               src="/Logga.png"
             />
@@ -76,11 +69,12 @@ const Navbar: NextPage = () => {
           <div className="fixed inset-0 bg-black/80 z-10 " onClick={() => setMenuOpen(false)} />
         )}
         {/* Mobilmeny innehåll */}
-        <div className={`fixed top-0 right-0 h-full text-black  w-2/3 max-w-xs bg-white shadow-lg z-30 transform ${menuOpen ? 'translate-x-0' : 'translate-x-full'} transition-transform duration-300 md:hidden flex flex-col pt-24 gap-8 text-xl font-bold`}
+        <div className={`fixed top-0 right-0 h-full text-black  w-2/5 max-w-xs bg-white shadow-lg z-30 transform ${menuOpen ? 'translate-x-0' : 'translate-x-full'} transition-transform duration-300 md:hidden flex flex-col pt-24 gap-8 text-xl font-bold`}
           style={{ pointerEvents: menuOpen ? 'auto' : 'none' }}
         >
           <Link href="/team" className="px-8 py-4 border-b border-gray-200 hover:bg-gray-100 hover:underline hover:text-[var(--accent)]" onClick={() => setMenuOpen(false)}>Team</Link>
           <Link href="/kontakt" className="px-8 py-4 border-b border-gray-200 hover:bg-gray-100 hover:underline hover:text-[var(--accent)]" onClick={() => setMenuOpen(false)}>Kontakt</Link>
+          
         </div>
       </div>
     </>

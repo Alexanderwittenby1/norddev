@@ -1,12 +1,11 @@
 import nodemailer from 'nodemailer';
-import emailTemplate from '@/components/custom/email-template';
+import {emailToCustomer, emailToTeam} from '@/components/custom/email-template';
 
 export async function POST(request: Request) {
- 
+  console.log("test")
 
   const { firstname,lastname, email, message } = await request.json();
   
-  // comment
   const transporter = nodemailer.createTransport({
     host: process.env.SMTP_HOST,
     port: 465,
@@ -18,14 +17,12 @@ export async function POST(request: Request) {
   });
 
   try {
-    const html = emailTemplate({ firstname, lastname, email, message });
-
     await transporter.sendMail({
       from: `Nytt kundmejl <kontakt@nordiskdev.se>` ,
       to: 'kontakt@nordiskdev.se',
       subject: `Nytt mail från ${firstname} ${lastname }`,
       replyTo: email,
-      html,
+      html: emailToTeam({ firstname, lastname, email, message }),
     });
 
     await transporter.sendMail({
@@ -33,13 +30,8 @@ export async function POST(request: Request) {
       to: email,
       subject: 'Tack för ditt meddelande',
       replyTo: `${email}`,
-      text: `Hej ${firstname} ${lastname},\n\nTack för ditt meddelande! Vi kommer att återkomma till dig så snart som möjligt.\n\nMed vänliga hälsningar,\nNordDev Teamet`,
-      attachments: [
-        {
-          filename: "NordDev.png",
-          path: "./public/NordDev.png",
-        },
-      ],
+      html: emailToCustomer({ firstname, lastname, email, message }),
+      
     });
 
     console.log("Mail skickat!");

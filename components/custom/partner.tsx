@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 import React from 'react'
 import Badge from '@/components/custom/badge';
 
-// Definera interface
+
 interface AnimationValues {
   initial: { opacity: number; y: number };
   whileInView: { opacity: number; y: number };
@@ -11,7 +11,7 @@ interface AnimationValues {
   viewport: { once: boolean };
 }
 
-// Definiera konstanter så att de kan återanvändas
+
 const animationValues: AnimationValues = {
   initial: { opacity: 0, y: -75 },
   whileInView: { opacity: 1, y: 0 },
@@ -22,7 +22,7 @@ const animationValues: AnimationValues = {
 
 export default function Partner() {
   return (
-    <div className='min-h-screen bg-gradient-to-b from-gray-100 to-white py-24'>
+    <div className='min-h-screen bg-gradient-to-b bg-white py-24'>
       <div className='w-full max-w-7xl mx-auto px-4 2xl:px-0'>
         <h1 className='text-3xl font-bold text-left mb-4 px-4'>VAD GÖR VI<span className='text-red-500'>?</span></h1>
         
@@ -74,10 +74,12 @@ export default function Partner() {
               Hos oss får du stöd genom hela processen – från inspiration och idégenerering till design, utveckling och lansering.
             </p>
             <motion.div className='flex flex-wrap justify-left gap-2 mt-2 text-sm font-medium text-gray-700 pt-38'>
-              {/*Jiggle animation while hovering*/}
+              
+
               <Badge text="React Native" link="https://reactnative.dev/" />
               <Badge text="Android" link="https://www.android.com/" />
               <Badge text="iOS" link="https://www.apple.com/os/ios/" />            
+
             </motion.div>
           </motion.div>
 
