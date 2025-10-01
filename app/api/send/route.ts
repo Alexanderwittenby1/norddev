@@ -2,7 +2,7 @@ import nodemailer from 'nodemailer';
 import {emailToCustomer, emailToTeam} from '@/components/custom/email-template';
 
 export async function POST(request: Request) {
- 
+  console.log("test")
 
   const { firstname,lastname, email, message } = await request.json();
   
