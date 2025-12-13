@@ -53,7 +53,7 @@ const Utvecklare = () => {
                 <span className="bg-[var(--accent)] text-white px-3 py-1 rounded-full">GraphQL</span>
                 <span className={person.name == "Isak" ? "bg-[var(--accent)] text-white px-3 py-1 rounded-full" : "hidden"}>C++</span>
                 <span className={person.name == "Erik" ? "bg-[var(--accent)] text-white px-3 py-1 rounded-full" : "hidden"}>C++</span>
-                <span className={person.name == "Alexander" ? "bg-[var(--accent)] text-white px-3 py-1 rounded-full" : "hidden"}>AWS</span>
+                <span className={person.name == "Alexander" ? "bg-[var(--accent)] text-white px-3 py-1 rounded-full" : "hidden"}>Azure</span>
 
               </div>
             </div>
