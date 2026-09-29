@@ -39,3 +39,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# /ndev todo board (runtime data, seeded on first read)
+/data
+
