@@ -1,14 +1,10 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/custom/navbar";
-import { Footer } from "@/components/custom/footer";
 import { SpeedInsights } from "@vercel/speed-insights/next"
-import Hero from "@/components/custom/hero";
 import ScrollToTopOnRouteChange from "@/components/custom/ScrollToTopOnRouteChange";
 import { Analytics } from "@vercel/analytics/next"
 import { ViewTransitions } from "next-view-transitions";
-import { ThemeProvider } from "@/components/custom/theme-provider";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -65,12 +61,7 @@ export default function RootLayout({
           <Analytics />
           <SpeedInsights/>
           <ScrollToTopOnRouteChange />
-          <Navbar />
-          <main className="grow-1">
-            {children}
-          </main>
-        <Footer />
-         
+          {children}
       </body>
     </ViewTransitions>
     </html>
