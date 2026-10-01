@@ -41,14 +41,14 @@ export function TodoBoard({ initialBoard }: { initialBoard: TodoBoard }) {
               type="button"
               onClick={dismissError}
               aria-label="Dölj felmeddelandet"
-              className="shrink-0 rounded-sm p-0.5 hover:bg-destructive/10 focus-visible:outline-none focus-visible:ring-[3px] focus-visible:ring-ring/50"
+              className="shrink-0 rounded-sm p-0.5 hover:bg-red-400/10 focus-visible:outline-none focus-visible:ring-[3px] focus-visible:ring-ring/50"
             >
               <X className="size-4" aria-hidden="true" />
             </button>
           </div>
         ) : null}
 
-        <div className="flex gap-4 overflow-x-auto pb-4">
+        <div className="flex gap-4 overflow-x-auto pb-4 w-full max-h-screen">
           {board.columns.map((column) => (
             <TodoColumnView
               key={column.id}
@@ -87,7 +87,7 @@ function AddColumn({ onCreate }: { onCreate: (title: string) => void }) {
         type="button"
         variant="outline"
         onClick={() => setAdding(true)}
-        className="h-10 w-72 shrink-0 justify-start"
+        className="h-10 w-72 shrink-0 justify-start bg-black text-white"
       >
         <Plus className="size-4" aria-hidden="true" />
         Ny kolumn

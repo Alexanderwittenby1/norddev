@@ -95,17 +95,18 @@ export function TodoCardItem({
             <button
               type="button"
               aria-label={`Åtgärder för ${card.title}`}
-              className="shrink-0 rounded-sm p-1 text-muted-foreground opacity-0 transition-opacity hover:bg-muted hover:text-foreground focus-visible:opacity-100 focus-visible:outline-none focus-visible:ring-[3px] focus-visible:ring-ring/50 group-hover:opacity-100 data-[state=open]:opacity-100"
+              className="shrink-0 rounded-sm p-1 text-muted-foreground focus-visible:opacity-100 focus-visible:outline-none focus-visible:ring-[3px] focus-visible:ring-ring/50 group-hover:opacity-100 data-[state=open]:opacity-100"
             >
-              <MoreHorizontal className="size-4" aria-hidden="true" />
+              <MoreHorizontal className="size-4 " aria-hidden="true" />
             </button>
           </DropdownMenuTrigger>
-          <DropdownMenuContent align="end" className="w-52">
+          <DropdownMenuContent align="end" sideOffset={6} className="w-52 bg-white">
             <DropdownMenuSub>
               <DropdownMenuSubTrigger>Flytta till kolumn</DropdownMenuSubTrigger>
-              <DropdownMenuSubContent>
+              <DropdownMenuSubContent sideOffset={4} alignOffset={-4} collisionPadding={8} className="bg-white ">
                 {columns.map((column) => (
                   <DropdownMenuItem
+                    className="bg-white text-black hover:bg-black/20 !px-0"
                     key={column.id}
                     disabled={column.id === card.columnId}
                     onSelect={() => onMoveTo(column.id)}
@@ -117,7 +118,7 @@ export function TodoCardItem({
             </DropdownMenuSub>
             <DropdownMenuSeparator />
             <DropdownMenuItem variant="destructive" onSelect={onDelete}>
-              <Trash2 className="size-4" aria-hidden="true" />
+              <Trash2 className="size-4 " aria-hidden="true" />
               Ta bort
             </DropdownMenuItem>
           </DropdownMenuContent>
